@@ -1,0 +1,34 @@
+{
+  "name": "semantic-release-npm-test",
+  "version": "0.0.0-development",
+  "description": "Test Semantic Release",
+  "main": "index.js",
+  "author": "Rafael Ribeiro <rpr.rafa@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "commit": "git-cz",
+    "semantic-release": "semantic-release",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.4",
+    "@commitlint/config-conventional": "^16.2.4",
+    "git-cz": "^4.8.0",
+    "husky": "^8.0.1",
+    "semantic-release": "^19.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rprrafa/semantic-release-npm-test.git"
+  }
+}
