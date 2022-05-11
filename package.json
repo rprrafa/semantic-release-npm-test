@@ -2,7 +2,7 @@
   "name": "semantic-release-npm-test",
   "version": "0.0.0-development",
   "description": "Test Semantic Release",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": "Rafael Ribeiro <rpr.rafa@gmail.com>",
   "license": "MIT",
   "scripts": {
