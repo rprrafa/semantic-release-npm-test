@@ -1,8 +1,11 @@
 name: Publish NPM CI
 
 on:
-  push:
-    branches: [ main ]
+  pull_request:
+    types:
+      - closed
+    branches:
+      - 'main'
 
 jobs:
   publish:
@@ -13,7 +16,7 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     runs-on: ${{ matrix.os }}
-    if: ${{ github.ref == 'refs/heads/main' }}
+    if:  ${{ github.event.pull_request.merged == true }}
     steps: 
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
